@@ -1,9 +1,6 @@
 #!/bin/bash
 
 # sysinfo_page - A script to produce an HTML file
-echo "starting"
-echo "updating footer:"
-
 cat > app/views/shared/_footer.html.erb << _EOF_
 <footer class="footer pt-3">
   <p class="text-center mb-1"><%= t("footer.powered_by", href: link_to("Space Shaala Pvt Ltd", "https://spaceshaala.com/", target: "_blank")).html_safe %> &copy;  SSERD 2020</p>
@@ -11,8 +8,6 @@ cat > app/views/shared/_footer.html.erb << _EOF_
 
 <%= render "shared/components/cookie_warning" %>
 _EOF_
-echo "footer updated"
-echo "updating header"
 
 cat > app/views/shared/_header.html.erb << _EOF_
 <div class="header py-4">
@@ -106,8 +101,6 @@ cat > app/views/shared/_header.html.erb << _EOF_
   </div>
 </div>
 _EOF_
-echo "header updated"
-echo "updating application"
 
 cat > app/views/layouts/application.html.erb << _EOF_
 <!DOCTYPE html>
@@ -187,11 +180,6 @@ cat > app/views/layouts/application.html.erb << _EOF_
 </html>
 _EOF_
 
-echo "updated"
-
-
-echo "updating index"
-
 cat > app/views/main/index.html.erb << _EOF_
 <div class="background">
   <div class="container pt-9 pb-8">
@@ -211,13 +199,6 @@ cat > app/views/main/index.html.erb << _EOF_
 <%= render "main/components/features" %>
 _EOF_
 
-echo "updated"
-
-
-echo "updating application"
-
 cat > app/views/main/components/_features.html.erb << _EOF_
 
 _EOF_
-
-echo "updated"
